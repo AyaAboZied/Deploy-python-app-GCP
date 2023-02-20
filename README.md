@@ -43,11 +43,12 @@ custom SA and attach it to your nodes.
     - docker tag gcp-python:latest gcr.io/your project-id/gcp-python:latest
     - docker push gcr.io/project-id/gcp-python:latest
 ### Pull another redis image from docker hub then push it to gcr
-file:///home/aya/Desktop/Deploy-python-app-GCP/screenshots/Screenshot%20from%202023-02-18%2017-43-22.png
 
-file:///home/aya/Desktop/Deploy-python-app-GCP/screenshots/Screenshot%20from%202023-02-18%2017-48-47.png
+![Screenshot from 2023-02-18 17-43-22](https://user-images.githubusercontent.com/68289149/220080785-9cb0e45a-9126-42ae-a129-8d3c28dd1a00.png)
 
-file:///home/aya/Desktop/Deploy-python-app-GCP/screenshots/Screenshot%20from%202023-02-18%2017-49-44.png
+![Screenshot from 2023-02-18 17-48-47](https://user-images.githubusercontent.com/68289149/220080795-74e2f9d5-072b-4d96-be04-12fd8abd1d5b.png)
+
+![Screenshot from 2023-02-18 17-49-44](https://user-images.githubusercontent.com/68289149/220080823-2aa68e45-d198-446f-91ee-7b96d2ba900f.png)
 
 
 ### SSH to the private VM:
@@ -68,10 +69,12 @@ file:///home/aya/Desktop/Deploy-python-app-GCP/screenshots/Screenshot%20from%202
     - kubectl apply -f .
     - kubectl get all
 
-file:///home/aya/Desktop/Deploy-python-app-GCP/screenshots/Screenshot%20from%202023-02-20%2011-42-58.png
+![Screenshot from 2023-02-20 11-40-08](https://user-images.githubusercontent.com/68289149/220081085-effc24ef-ba9d-4162-9e30-d504d0e453fe.png)
 
+![Screenshot from 2023-02-20 11-42-58](https://user-images.githubusercontent.com/68289149/220081110-78bba1ec-460b-4922-99c8-d302c1aba9c5.png)
 
 5. finally go to Services & Ingress in kubernetes Engine page
     - click on the endpoint
+![Screenshot from 2023-02-20 11-41-30](https://user-images.githubusercontent.com/68289149/220081201-681707d8-5faf-496b-84a7-cf7d768d4d97.png)
 
-file:///home/aya/Desktop/Deploy-python-app-GCP/screenshots/Screenshot%20from%202023-02-20%2011-41-30.png
+
