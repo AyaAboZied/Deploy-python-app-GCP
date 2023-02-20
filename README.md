@@ -42,7 +42,7 @@ custom SA and attach it to your nodes.
     - docker build -t gcp-python .
     - docker tag gcp-python:latest gcr.io/your project-id/gcp-python:latest
     - docker push gcr.io/project-id/gcp-python:latest
-### Pull another redis image from docker hub then push it to gcr
+### Pull another redis image from docker hub then push it to GCR
 
 ![Screenshot from 2023-02-18 17-43-22](https://user-images.githubusercontent.com/68289149/220080785-9cb0e45a-9126-42ae-a129-8d3c28dd1a00.png)
 
@@ -75,6 +75,7 @@ custom SA and attach it to your nodes.
 
 5. finally go to Services & Ingress in kubernetes Engine page
     - click on the endpoint
+   
 ![Screenshot from 2023-02-20 11-41-30](https://user-images.githubusercontent.com/68289149/220081201-681707d8-5faf-496b-84a7-cf7d768d4d97.png)
 
 
