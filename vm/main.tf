@@ -3,15 +3,10 @@ resource "google_service_account" "manage_cluster" {
 }
 
 resource "google_project_iam_member" "gke_management" {
-  project = var.service_account_project 
+  project = var.service_account_project #"mercurial-time-233114"
   role    = var.service_account_role    #"roles/container.admin"
   member  = "serviceAccount:${google_service_account.manage_cluster.email}"
 }
-
-data template_file "installation" {
-  template = file(./myscript.sh)
-}
-
 
 resource "google_compute_instance" "vm_instance" {
   name         = var.vm_name
@@ -32,10 +27,10 @@ resource "google_compute_instance" "vm_instance" {
     }
   }
 
-  metadata_startup_script = data.template_file.installation.rendered
-
+  metadata_startup_script = var.script 
+  
   service_account {
     email  = google_service_account.manage_cluster.email
-    scopes = ["cloud-platform"]
+    scopes = ["https://www.googleapis.com/auth/cloud-platform"]
   }
 }

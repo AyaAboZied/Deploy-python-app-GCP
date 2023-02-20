@@ -1,0 +1,41 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gcp-python
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: gcp-python
+  template:
+    metadata:
+      labels:
+        name: gcp-python
+    spec:
+      containers:
+      - image: "gcr.io/mercurial-time-233114/gcp-python:latest"
+        name: gcp-python
+        env:
+        - name: REDIS_PORT
+          value: "6379"
+        - name: REDIS_HOST
+          value: redis-server
+        ports:
+        - containerPort: 80
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: gcp-python
+spec:
+  type: LoadBalancer
+  selector:
+    name: gcp-python
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000

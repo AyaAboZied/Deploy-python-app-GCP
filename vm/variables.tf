@@ -28,3 +28,7 @@ variable "vm_network" {
 
 variable "vm_image" {
 }
+
+variable script {
+
+}
