@@ -24,9 +24,9 @@ custom SA and attach it to your nodes.
 ### Tools Used
     - Terraform
     - GCP
-    - Docker
-    - Kubernetes
-    - Python
+    - Docker & GCR
+    - Kubernetes & GKE
+    
 
 ### Get Started
 
